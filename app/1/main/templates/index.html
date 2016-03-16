@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <script type="text/javascript" src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/upload.js"></script>
+    <script type="text/javascript" src="/static/js/wave.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script type="text/javascript" src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- 上传文件插件Webuploader  -->
+    <script type="text/javascript" src="/static/js/webuploader.js"></script>
+    <script type="text/javascript" src="/static/js/tab.js"></script>
+
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css">
+ 
+    <!-- DataTables -->
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="container" style="width:100%;margin:0">
+    <div class="row" style="background:#00BBFF">
+        <div class="col-md-2" style="color:black;font-family:sans-serif,Georgia;">
+           <img src="/static/logo.png" class="img-rounded">
+        </div>
+        <div class="col-md-1" style="color:white;font-family:sans-serif,Georgia;">
+           <h2 class="text-center" ><strong>漂泊的云</strong></h2>
+        </div>
+    </div>
+        <div class="row">
+            <div class="row-btn pd-lf">
+                <span id="pck" class="btn btn-success fileinput-button">
+                    <i class="glyphicon glyphicon-plus"></i>
+                    <span>Add files...</span>
+                    <input  type="file" name="files[]" multiple>
+                </span>
+                <!--<button id="ctlBtn" class="btn btn-default" data-toggle="modal" data-target="#myModal">开始上传</button>-->
+                 <button id="ctlBtn" class="btn btn-default" data-toggle="modal" data-target="#myModal">开始上传</button>
+                <button class="btn btn-success btn-large" type="button" id="reload">刷新</button>
+                <div id="hid" style="visible:hidden">
+                    <button class="btn btn-success btn-large" type="button" id="down">下载</button>
+                    <button class="btn btn-success btn-large" type="button" id="delete">删除</button>
+                </div>
+                <div id="thelist" class="uploader-list"></div>
+            </div>
+        </div>
+        <div class="row pd-lf">
+            <p>
+                我的云
+            </p>
+        </div>
+        <div class="row">
+            <table id="table_id" width="100%" cellspacing="0" class="stripe hover row-border">
+                <thead>
+                    <tr>
+                        <th>文件名</th>
+                        <th>修改时间</th>
+                        <th>大小</th>
+                    </tr>
+                </thead>
+            </table>
+            <!--
+            <table class="table table-hover">
+                <tr>
+                    <th></th>
+                    <th>文件名</th>
+                    <th>修改时间</th>
+                    <th>大小</th>
+                </tr>
+                {% for item in files %}
+                    <tr>
+                        <td><input type="checkbox" id="checkbox{{ item.id }}" value="option1"></td>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.time }}</td>
+                        <td>{{ item.bytes }}</td>
+                    </tr>
+                {% endfor %}
+            </table> -->
+        </div>
+        <!-- <div id="push"></div> -->
+</div>
+<div class="modal fade" id="myModal"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+         <div class="modal-content">
+                 <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                     <h4 class="modal-title" id="myModalLabel">上传进度</h4>
+                 </div>
+                 <div class="modal-body" >
+                     ...
+                 </div>
+                 <div class="modal-footer">
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                     <button type="button" class="btn btn-primary">取消上传</button>
+                 </div>
+         </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+    <footer class="footer">
+         <p>
+                CopyRight @ 2016
+         </p>
+    </footer>
+    <!--
+    <div class="row">
+        <div class="col-md-2" id="myScrollspy">
+            <ul class="nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="125">
+                <li class="text-center"><a href="#section-1">所有文件</a></li>
+                <li class="text-center"><a href="#section-2">视频</a></li>
+                <li class="text-center"><a href="#section-3">音乐</a></li>
+                <li class="text-center"><a href="#section-4">文档</a></li>
+                <li class="text-center"><a href="#section-5">图片</a></li>
+                <li class="text-center"><a href="#section-5">回收站</a></li>
+            </ul>
+        </div>
+        <div class="col-md-9"></div>
+    </div>
+    -->
+</body>
+</html>

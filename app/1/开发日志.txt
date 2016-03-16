@@ -1,0 +1,111 @@
+
+
+2016/3/7
+1、添加footer？
+在body的元素不足的情况下，footer依然在浏览器脚部，对footer使用position:absolute;bottom:0;布局
+absolute是相对于浏览器的布局，可以使用top，left，right，bottom；
+relative相对于前一个部分的布局，可以使用margin;
+
+2、使得body的内容铺满浏览器的宽度？
+使用container-fluid达到100%的宽度，而container只是固定宽度
+
+3、内容的偏移量？
+body的row内容可以用position:relative来调整偏移量
+
+4、display?
+表示块内的元素应该如何布置，inline-block没有换行
+
+5、Overflow？
+表示超出块的内容如何显示，overflow:hidden;表示超出的内容忽略
+
+6、cursor: pointer;
+光标的显示类型，pointer表示显示为一只手
+
+7、direction: ltr;
+文字显示的方向，ltr表示文本从左到右显示
+
+8、opacity: 0;
+表示透明度，0完全透明，1.0完全不透明
+
+
+2016/3/8
+1、无法上传文件？  在为按钮添加 web upload，按钮样式改变？
+js没有写对
+web upload对按钮进行了改变。。。去掉 web upload 的 css
+
+2、Bootstrap的Modal，模态框？
+在按钮的class添加 data-toggle="modal" data-target="#example"，改变模态框的显示位置
+
+
+2、添加进度条，在服务器端flask接受文件。
+
+2、前端的上传文件，多个文件，大文件的分片上传，断点续传？
+
+
+3、PyCharm安装Js插件，File-->Setting-->Plugins
+
+
+2016/3/9
+1、服务器端使用插件Flask-Uploads如何接受文件？
+文档不详细。。。放弃
+使用 Flask-WTF
+首先，建立一个Form类，再在HTML中引用，
+一个Form类，用于前端和后端的连接，在后端能够直接用Form来获取前端的数据
+在虚拟环境中，pip需要进入到env\Scripts内
+
+IOError: [Errno 2] No usable temporary directory found in ['/tmp', '/var/tmp', '/usr/tmp',
+因为七牛中的获得tmp文件针对于本地，用sae自带的获得tmp文件解决
+https://www.douban.com/group/topic/23840698/
+
+2016/3/10
+1、上传文件服务器无法接受？
+？？？？？
+
+2016/3/14
+1、上传文件并保存
+通过sae的bucket能够上传文件。
+
+2、获得文件列表，下载文件。
+在获得上传文件的属性时候，如果直接返回python的变量报错，一般转换成str
+
+******获得动态对象的方法???
+可以先尝试type获取对象的类型，若是list或dict,则直接str(obj)获得对象内容
+
+3、七牛的上传实例中只支持有文件路径的上传
+在webuploader中添加对应文件的路径，或许
+在添加文件的时候只是记录了文件路径，并不用webuploader来上传文件
+
+************                       暂时不管七牛的问题，直接在sae上面实现
+
+4、列出sae上面的文件。
+使用bucket.list()列出所有的文件，其中的每一个文件是一个sae的dict，可以用.name的方式获取
+
+在Flask框架返回json，用jsonify({})
+返回数组使用jsonify({'file':[]})
+
+5、把文件列表展示在前台
+通过模板调用，把list对象传递过去
+在模板中，可以直接使用字符串和占位符拼接  id="checkbox{{ item.id }}"
+
+2016/3/15 -- 2016/3/16
+问题：table没有全局规划，需修改？
+1、时间调整
+把本地时间添加到metadata中
+
+2、图片的大小变小了
+
+3、上传进度条
+
+4、选择，删除文件
+jQuery框架DataTables
+
+
+5、刷新内容
+window.location.reload()
+给reload按钮添加click事件 $('#reload').click(function())
+
+6、大文件的上传
+
+
+
+

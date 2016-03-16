@@ -1,0 +1,70 @@
+
+/*
+ * Globals
+ */
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.pd-lf{
+    padding-left:20px;
+}
+
+
+/*
+ * Body
+ */
+body{
+    margin-bottom:60px;
+    height:100%;
+}
+/*
+ * Row add file btn
+ */
+
+#picker{
+    padding:0;
+}
+
+.row-btn{
+   padding-top: 10px;
+   padding-bottom: 10px;
+   background-color: #f6f6f6;
+}
+
+.fileinput-button {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.fileinput-button input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0;
+  -ms-filter: 'alpha(opacity=0)';
+  font-size: 200px !important;
+  direction: ltr;
+  cursor: pointer;
+}
+
+
+/*
+ * Footer
+ */
+
+.footer {
+  position:absolute;
+  bottom:0;
+  width: 100%;
+  height:60px;
+  padding: 20px 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e5e5e5;
+}
